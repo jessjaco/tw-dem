@@ -3,17 +3,20 @@
 ## Development Setup
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd python-template
    ```
 
 2. **Install uv** (if not already installed)
+
    ```bash
    curl -LsSf https://astral.sh/uv/install.sh | sh
    ```
 
 3. **Install dependencies**
+
    ```bash
    uv sync --dev
    ```
@@ -30,34 +33,40 @@ This project uses a **feature branch workflow** with `main` as the production br
 ### Making Changes
 
 1. **Start with the latest main**
+
    ```bash
    git checkout main
    git pull origin main
    ```
 
 2. **Create a feature branch**
+
    ```bash
    git checkout -b your-branch-name
    ```
 
 3. **Make your changes on the feature branch**
+
    - Edit files as needed
    - Add new features or fix bugs
    - Follow the coding standards (enforced by pre-commit hooks)
 
 4. **Test your changes**
+
    ```bash
    uv run pytest
    uv run pre-commit run --all-files
    ```
 
 5. **Commit your changes**
+
    ```bash
    git add <your-files>
    git commit -m "descriptive commit message"
    ```
 
 6. **Push your feature branch**
+
    ```bash
    git push origin feature/your-feature-name
    ```
@@ -70,6 +79,7 @@ This project uses a **feature branch workflow** with `main` as the production br
 - Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
 
 **Examples:**
+
 ```
 Add user authentication system
 
@@ -82,13 +92,16 @@ Fixes #123
 ### Pull Request Process
 
 1. **Open a pull request** from your feature branch targeting `main`
+
    - Use the provided PR template
    - Provide a clear description of your changes
    - Link any related issues
 
 2. **Address review feedback**
+
    - Make changes on your feature branch
    - Push additional commits to update the PR
+
    ```bash
    git add <your-files>
    git commit -m "Address review feedback"
@@ -103,6 +116,7 @@ Fixes #123
 ## Code Quality Standards
 
 ### Pre-commit Hooks
+
 This project uses pre-commit hooks to ensure code quality. The following checks run automatically:
 
 - **Ruff**: Code formatting and linting
@@ -130,8 +144,8 @@ uv run pre-commit run --all-files
 ## Project Structure
 
 ```
-python-template/
-├── python_template/          # Main package directory
+tw-dem/
+├── tw-dem/          # Main package directory
 │   ├── __init__.py
 │   └── ...
 ├── tests/                    # Test directory
@@ -149,12 +163,15 @@ python-template/
 ## Troubleshooting
 
 ### Pre-commit Hook Failures
+
 If pre-commit hooks fail:
+
 1. Review the error messages
 2. Fix the issues
 3. Re-add and commit your changes
 
 ### uv Issues
+
 - Update uv: `uv self update`
 - Clear cache: `uv cache clean`
 - Reinstall dependencies: `uv sync --reinstall --dev`
